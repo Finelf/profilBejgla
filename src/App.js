@@ -1,26 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
+import {BrowserRouter as Router, Route} from "react-router-dom";
+import Landing from './Components/Landing/Landing'
+import Dashboard from './Components/Dashboard/Dashboard'
+import FourOFour from "./Components/FourOFour";
+import Login from "./Components/Login"
+import ProtectedRoute from "./Components/ProtectedRoute";
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit test :)<code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+    <Router>
+            <Route exact path='/' component={Landing}/>
+            <Route exact path='/login' component={Login}/>
+            <ProtectedRoute path='/dashboard' component={Dashboard}/>
+            <Route exact path='/404' component={FourOFour}/>
+    </Router>
+);
 
-export default App;
+export default App
