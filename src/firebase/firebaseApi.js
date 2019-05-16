@@ -1,5 +1,5 @@
-import firebase from 'firebase'
-import firebaseApp from "./firebaseConfig";
+import * as firebase from 'firebase'
+//import firebaseApp from "./firebaseConfig";
 //import {Map} from 'immutable'
 
 const provider = new firebase.auth.FacebookAuthProvider();

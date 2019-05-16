@@ -1,4 +1,5 @@
-import {call, put, takeEvery} from 'redux-saga/effects'
+import {call, put, takeEvery, fork} from 'redux-saga/effects'
+import {todoSaga} from "../Components/TodoList/todoSagas";
 import {fromJS} from 'immutable'
 import {
     authUserEnd,
@@ -11,6 +12,8 @@ import {
 } from "../firebase/firebaseApi";
 
 export function* rootSaga() {
+    yield fork(todoSaga);
+
     yield takeEvery(types.AUTH_USER_START, authUser);
 }
 
