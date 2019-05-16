@@ -1,6 +1,6 @@
 import React from 'react'
 import {Route, Redirect} from 'react-router-dom'
-import {getUserLoginStatus} from "../selectors/generalSelector";
+import {getUserLoginStatus} from "./App/generalSelector";
 import {connect} from "react-redux";
 
 const ProtectedRoute = ({component: Component, ...rest}) => {

@@ -1,4 +1,4 @@
-import {types} from './actions'
+import {types} from '../auth/actions'
 
 export default (state = false, {type, payload}) => {
     switch (type) {

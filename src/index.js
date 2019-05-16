@@ -4,13 +4,12 @@ import {Provider} from 'react-redux'
 import {createStore, applyMiddleware, compose} from 'redux'
 import createSagaMiddleware from 'redux-saga'
 
-import App from './App';
-import generalReducer from './redux/generalReducer'
-import userReducer from './redux/userReducer'
+import App from './Components/App/App';
+import generalReducer from './Components/App/generalReducer'
+import userReducer from './Components/auth/userReducer'
 import {combineReducers} from 'redux-immutable'
 
-import * as serviceWorker from './serviceWorker'
-import {rootSaga} from './sagas/rootSagas';
+import {rootSaga} from './Components/App/rootSagas';
 import todoReducer from "./Components/TodoList/todoReducer";
 
 const sagaMiddleware = createSagaMiddleware();
@@ -37,5 +36,3 @@ render(
         <App/>
     </Provider>, document.getElementById('root')
 );
-
-serviceWorker.unregister();

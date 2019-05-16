@@ -1,15 +1,15 @@
-import {call, put, takeEvery, fork} from 'redux-saga/effects'
-import {todoSaga} from "../Components/TodoList/todoSagas";
+import {call, put, takeEvery, fork} from 'redux-saga/dist/redux-saga-effects-npm-proxy.esm'
+import {todoSaga} from "../TodoList/todoSagas";
 import {fromJS} from 'immutable'
 import {
     authUserEnd,
 
     types
-} from '../redux/actions'
+} from '../auth/actions'
 
 import {
     facebookLogin
-} from "../firebase/firebaseApi";
+} from "../auth/firebaseAuth";
 
 export function* rootSaga() {
     yield fork(todoSaga);

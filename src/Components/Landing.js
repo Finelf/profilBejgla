@@ -1,7 +1,7 @@
 import React from 'react'
 import {connect} from 'react-redux'
 import {Redirect} from 'react-router-dom'
-import {getUserLoginStatus} from '../../selectors/generalSelector'
+import {getUserLoginStatus} from './App/generalSelector'
 
 const Landing = ({isUserLoggedIn}) => (
     <div>
@@ -14,4 +14,5 @@ const mapStateToProps = state => {
         isUserLoggedIn: getUserLoginStatus(state)
     }
 };
-export default connect(mapStateToProps, null)(Landing);
+
+connect(mapStateToProps, null)(Landing);

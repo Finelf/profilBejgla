@@ -1,12 +1,11 @@
 import React from 'react';
 import {BrowserRouter as Router, Route} from "react-router-dom";
-//import Landing from './Components/Landing/Landing'
-import Dashboard from './Components/Dashboard/Dashboard'
-import FourOFour from "./Components/FourOFour";
-import Login from "./Components/Login"
-import ProtectedRoute from "./Components/ProtectedRoute";
+import Dashboard from '../Dashboard/Dashboard'
+import FourOFour from "../FourOFour";
+import Login from "../Login"
+import ProtectedRoute from "../ProtectedRoute";
 import './App.css';
-import TodoList from "./Components/TodoList/TodoList";
+import TodoList from "../TodoList/TodoList";
 
 const App = () => (
     <Router>

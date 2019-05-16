@@ -1,5 +1,5 @@
 //import axios from "axios";
-import {db} from '../../firebase/firebaseConfig'
+import {db} from '../App/firebaseConfig'
 
 //const apiUrl = 'http://localhost:8080/todos';
 
