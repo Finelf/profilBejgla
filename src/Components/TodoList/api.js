@@ -1,8 +1,4 @@
-//import axios from "axios";
 import {db} from '../App/firebaseConfig'
-
-//const apiUrl = 'http://localhost:8080/todos';
-
 
 export const fetchTodos = () => {
     return db.collection("todos").get()
@@ -18,12 +14,9 @@ export const fetchTodos = () => {
         });
 };
 
-// export const postTodoAsync = (payload) => {
-//     return  axios.post(apiUrl, {text: payload})
-// };
 export const postTodoAsync = (payload) => {
     let todoObject = {
-        text:payload
+        payload
     };
     return db.collection("todos").add({
         todoObject

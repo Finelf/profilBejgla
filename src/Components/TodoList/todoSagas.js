@@ -1,4 +1,5 @@
 import {call, put, takeEvery} from 'redux-saga/effects'
+import { push } from 'connected-react-router'
 import {fromJS} from "immutable"
 import {
     createSuccess,
@@ -34,7 +35,7 @@ export function* todoSaga() {
 function* postTodo({payload}) {
     const response = yield call(postTodoAsync, payload);
     yield put(createSuccess(fromJS(response)));
-    yield put(setCreateInput(''));
+    yield put(push('/dashboard'))
 }
 
 function* getAllTodos() {

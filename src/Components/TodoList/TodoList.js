@@ -2,7 +2,6 @@ import React, {Component} from 'react'
 import {connect} from 'react-redux'
 import {getIsLoading} from "./selectors"
 
-import InputCom from './Components/InputCom'
 import TodoView from './Components/TodoView'
 import Footer from "./Components/Footer"
 import IconLoop from '@material-ui/icons/Loop'
@@ -14,7 +13,6 @@ class TodoList extends Component {
             <div>
                 <div className='paper'>
                     {this.props.isLoading ? (<IconLoop className='animate'/>) : null}
-                    <InputCom/>
                     <TodoView/>
                     <Footer/>
                 </div>

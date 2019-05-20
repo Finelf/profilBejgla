@@ -25,7 +25,6 @@ export const types = {
 export const setCreateInput = (payload) => ({
     type: types.SET_CREATE_INPUT,
     payload: payload
-
 });
 export const create = (payload) => ({
     type: types.CREATE,

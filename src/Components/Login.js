@@ -6,7 +6,6 @@ import {connect} from "react-redux";
  
 const Login = (props) => (
     <div>
-        {(window.aaa = props.history, undefined)}
         <h2 onClick={props.authUser}>Přihlaš se</h2>
     </div>
 );

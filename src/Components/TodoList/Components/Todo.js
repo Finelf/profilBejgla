@@ -3,14 +3,11 @@ import {connect} from 'react-redux'
 import {getEditID, getUpdateInputValue} from "../selectors";
 import {
     setUpdateInput,
-    toggleEditing,
     update,
     toggleDone,
     deleteTodo,
 } from "../actions";
 
-import IconEdit from '@material-ui/icons/Edit';
-import IconClear from '@material-ui/icons/Clear';
 import Checkbox from '@material-ui/core/Checkbox/index'
 
 class Todo extends Component {
@@ -18,24 +15,17 @@ class Todo extends Component {
         e.preventDefault();
         this.props.setUpdateInput(e.target.value)
     };
-    handleEdit = (id) => {
-        this.props.toggleEditing(id)
-    };
     handleSubmit = (id, inputValue) => {
         this.props.update({id, inputValue});
     };
     handleCheckbox = (id, completed) => {
         this.props.toggleDone({id, completed})
     };
-    handleDelete = id => {
-        this.props.deleteTodo(id)
-    };
-
     render() {
         const {todo, editID, inputValue} = this.props;
         return (
             <tr>
-                <td width="10%">
+                <td>
                     <Checkbox
                         checked={todo.get("completed")}
                         onChange={() => this.handleCheckbox(todo.get("id"), todo.get("completed"))}
@@ -60,10 +50,6 @@ class Todo extends Component {
                             style={{textDecoration: todo.get("completed") ? 'line-through' : 'none'}}>{todo.get("text")}</span>
                     }
                 </td>
-                <td width="15%">
-                    <IconEdit className='icon' onClick={() => this.handleEdit(todo.get("id"))}/>
-                    <IconClear className='icon' onClick={() => this.handleDelete(todo.get("id"))}/>
-                </td>
             </tr>
         );
     }
@@ -76,7 +62,6 @@ const mapStateToProps = (state) => {
     }
 };
 const mapDispatchToProps = dispatch => ({
-    toggleEditing: id => dispatch(toggleEditing(id)),
     setUpdateInput: val => dispatch(setUpdateInput(val)),
     update: id => dispatch(update(id)),
     toggleDone: val => dispatch(toggleDone(val)),

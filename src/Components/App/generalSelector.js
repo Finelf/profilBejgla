@@ -1,1 +1,1 @@
-export const getUserLoginStatus = state => state.get("general");
+export const getUserLoginStatus = state => state.getIn(["general", "isUserLoggedIn"]);

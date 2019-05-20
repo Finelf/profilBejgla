@@ -29,47 +29,21 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
 .App-link {
   color: #61dafb;
 }
-.paper {
-  position: relative;
-  background-image: url('./cara.png');
-  background-repeat: no-repeat;
-  background-color: #EEEC66;
-  background-position: 12%;
-  padding: 20px 10px 0 10px;
-  z-index: 15;
+.todoForm {
+  display: flex;
+  flex-direction: column;
+}
+.todoForm select {
+  width: 100%;
 }
 .divider{
   width: 1px;
   border-left: 1px solid red;
   left: 82px;
   bottom: 14px;
-}
-form{
-  display: flex;
-}
-form input {
-  flex: 1 0;
-  padding-left: 48px;
-  overflow: hidden;
-  background: none;
-  line-height: 30px;
-  font-size: 19px;
-  border:0;
-  border-bottom:2px solid black;
-  outline: 0;
-}
-table {
-  width: 100%;
-}
-table td {
-  border-bottom: 1px solid #19fff3;
-}
-tbody > tr:last-child td {
-  border-bottom:2px solid black;
 }
 .text input {
   border-bottom: none;
@@ -104,7 +78,6 @@ tbody > tr:last-child td {
   right:40px;
   bottom:25px;
 }
-
 @keyframes loader {
   from {
     transform: rotate(360deg);

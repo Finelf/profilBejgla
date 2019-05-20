@@ -1,4 +1,5 @@
 import {call, put, takeEvery, fork} from 'redux-saga/dist/redux-saga-effects-npm-proxy.esm'
+import { push } from 'connected-react-router'
 import {todoSaga} from "../TodoList/todoSagas";
 import {fromJS} from 'immutable'
 import {
@@ -21,5 +22,5 @@ function* authUser() {
     const userInfo = yield call(facebookLogin);
     yield console.log("saga:", userInfo);
     yield put(authUserEnd(fromJS(userInfo)));
-    window.aaa.push('/')
+    yield put (push('/dashboard'))
 }
