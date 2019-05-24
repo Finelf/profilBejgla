@@ -1,12 +1,12 @@
 import React, {Fragment} from 'react';
 import {Route} from 'react-router-dom';
-import Admin from '../Admin/Admin'
-import Dashboard from '../Dashboard/Dashboard'
+import Admin from '../Admin'
+import Dashboard from '../Dashboard'
 import AddTodo from '../TodoList/Components/AddTodo/AddTodoForm'
 import FourOFour from '../FourOFour';
 import Login from '../Login'
 import Landing from '../Landing'
-import ProtectedRoute from '../ProtectedRoute';
+import ProtectedRoute from './routes/ProtectedRoute';
 import './App.css';
 
 const App = () => (

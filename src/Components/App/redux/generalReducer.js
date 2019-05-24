@@ -1,17 +1,16 @@
-import {types} from '../Admin/adminActions'
-import {types as userTypes} from '../auth/actions'
+import {types} from '../../auth/authActions'
 import { combineReducers}  from 'redux-immutable'
 
-const isUserLoggedIn = (state = false, {type, payload}) => {
+const isUserAuthorized = (state = false, {type}) => {
     switch (type) {
         case types.AUTHORIZE_USER_END:
             return true;
-        case userTypes.SIGN_OUT_USER_END:
+        case types.SIGN_OUT_USER_END:
             return false;
         default:
             return state
     }
 };
 export default combineReducers({
-    isUserLoggedIn,
+    isUserAuthorized,
 })

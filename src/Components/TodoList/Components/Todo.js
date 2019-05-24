@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {getEditID, getUpdateInputValue} from '../selectors';
+import {getEditID, getUpdateInputValue} from '../../App/generalSelectors';
 import {
     setUpdateInput,
     update,
     toggleDone,
     deleteTodo,
-} from '../actions';
+} from '../todoActions';
 
 import Checkbox from '@material-ui/core/Checkbox/index'
 

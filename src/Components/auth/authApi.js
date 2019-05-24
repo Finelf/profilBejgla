@@ -1,13 +1,7 @@
 import * as firebase from 'firebase'
-import {auth, db} from '../App/firebaseConfig'
+import {auth, db, functions} from '../App/firebaseConfig'
 
 const provider = new firebase.auth.FacebookAuthProvider();
-
-export const fetchAllUsers = () => {
-    return db.collection('users').get().then(snapshot => {
-        return snapshot.docs.map(doc => doc.data())
-    })
-};
 
 export const isUserAuthorizedAsync = () => {
     return new Promise((resolve, reject) => {
@@ -17,9 +11,7 @@ export const isUserAuthorizedAsync = () => {
                         .then(idTokenResult => {
                             resolve(idTokenResult.claims.authorizedUser)
                         })
-                        .catch(err => {
-                            console.log(err)
-                        })
+                        .catch(reject)
                 } else {
                      resolve(false)
                 }
@@ -27,7 +19,6 @@ export const isUserAuthorizedAsync = () => {
         );
     })
 };
-
 export const facebookLogin = () => {
     return auth.setPersistence(firebase.auth.Auth.Persistence.LOCAL)
         .then(() => {
@@ -54,7 +45,19 @@ export const facebookLogin = () => {
             console.log(errorCode, errorMessage, email, credential)
         });
 };
-
+export const authorizeUserAsync = (props) => {
+    const addAuthorizedUser = functions.httpsCallable('authorizeUser');
+    addAuthorizedUser({email: props.payload}).then(data => {
+        console.log("successfully authorized:", data)
+    }).catch(err => {
+        console.log(err.code, err.message, err.details)
+    })
+};
+export const fetchAllUsersAsync = () => {
+    return db.collection('users').get().then(snapshot => {
+        return snapshot.docs.map(doc => doc.data())
+    })
+};
 export const signOutUserAsync = () => {
     return auth.signOut().then(() => {
         return true

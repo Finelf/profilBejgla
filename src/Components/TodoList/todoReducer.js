@@ -1,6 +1,6 @@
 import {List} from 'immutable'
 import {combineReducers} from 'redux-immutable'
-import {types} from './actions'
+import {types} from './todoActions'
 
 const todosData = (state = List(), {type, payload}) => {
     switch (type) {

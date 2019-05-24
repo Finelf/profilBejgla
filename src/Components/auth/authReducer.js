@@ -1,4 +1,4 @@
-import {types} from './actions'
+import {types} from './authActions'
 import {combineReducers} from "redux-immutable";
 
 const currentUser = (state = {}, {type, payload}) => {

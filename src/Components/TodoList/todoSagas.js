@@ -11,7 +11,7 @@ import {
     toggleDoneSuccess,
     deleteSuccess,
     types,
-} from './actions'
+} from './todoActions'
 import {
     fetchTodos,
     postTodoAsync,
@@ -19,7 +19,7 @@ import {
     incompleteTodoAsync,
     completeTodoAsync,
     deleteTodoAsync
-} from './api'
+} from './todoApi'
 
 export function* todoSaga() {
     yield call(getAllTodos);

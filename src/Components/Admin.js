@@ -1,12 +1,11 @@
 import React, {Fragment} from 'react';
 import {connect} from "react-redux";
-import {authorizeUser} from "./adminActions";
-import {getListOfUsers} from "../App/generalSelector";
+import {authorizeUser} from "./auth/authActions";
+import {getListOfUsers} from "./App/generalSelectors";
 
 const Admin = (props) => (
     <Fragment>
         <h1>Administrace</h1>
-        {console.log(props.users)}
         <ul>
             {props.users.map(user =>
             <li key={user.get('uid')}>

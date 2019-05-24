@@ -5,3 +5,5 @@ export const getCreateInputValue = state => state.getIn(['data', 'todoReducer', 
 export const getUpdateInputValue = state => state.getIn(['data', 'todoReducer', 'updateInput']);
 
 export const getCurrentUser = state => state.getIn(['data, userReducer, currentUser']);
+export const getUserAuthStatus = state => state.getIn(['general', 'isUserAuthorized']);
+export const getListOfUsers = state => state.getIn(['data', 'userReducer', 'users']);

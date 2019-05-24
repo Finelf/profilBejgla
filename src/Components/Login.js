@@ -1,6 +1,6 @@
 
 import React from 'react';
-import {authUserStart} from './auth/actions';
+import {authUserStart} from './auth/authActions';
 import {withRouter} from 'react-router-dom'
 import {connect} from 'react-redux';
  

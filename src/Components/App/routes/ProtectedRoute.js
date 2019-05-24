@@ -1,19 +1,18 @@
 import React from 'react'
 import {Route} from 'react-router-dom'
-import {getUserLoginStatus} from './App/generalSelector';
+import {getUserAuthStatus} from '../generalSelectors';
 import {connect} from 'react-redux';
-import {pushRoute} from "./App/routesActions";
+import {pushRoute} from "./routesActions";
 
 const ProtectedRoute = ({component: Component, pushRoute, ...rest}) => {
     const permissionDecision = props => {
-        if(rest.isUserLoggedIn) {
+        if(rest.isUserAuthorized) {
             return <Component {...props}/>
         } else {
             pushRoute('login');
             return null
         }
     };
-
     return (
         <Route {...rest} render={permissionDecision}/>
     )
@@ -21,7 +20,7 @@ const ProtectedRoute = ({component: Component, pushRoute, ...rest}) => {
 
 const mapStateToProps = state => {
     return {
-        isUserLoggedIn: getUserLoginStatus(state),
+        isUserAuthorized: getUserAuthStatus(state),
     }
 };
 const mapDispatchToProps = dispatch => ({

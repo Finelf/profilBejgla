@@ -1,27 +1,12 @@
-import React, {PureComponent} from 'react'
-import {connect} from 'react-redux'
-import {getUserLoginStatus} from './App/generalSelector'
-import {pushRoute} from "./App/routesActions";
+import React from 'react'
 
-class Landing extends PureComponent {
-    render() {
-        const {isUserLoggedIn, pushRoute} = this.props;
-        return (
-            <div>
-                Vítej :)
-                {/*{isUserLoggedIn ? pushRoute('dashboard') : pushRoute('login')}*/}
-            </div>
-        );
-    }
-}
+const Landing = () => {
 
-const mapStateToProps = state => {
-    return {
-        isUserLoggedIn: getUserLoginStatus(state)
-    }
+    return (
+        <div>
+            Vítej :)
+        </div>
+    );
 };
-const mapDispatchToProps = dispatch => ({
-    pushRoute: destination => dispatch(pushRoute(destination))
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(Landing);
+export default Landing
