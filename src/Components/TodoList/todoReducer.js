@@ -1,6 +1,6 @@
 import {List} from 'immutable'
 import {combineReducers} from 'redux-immutable'
-import {types} from "./actions"
+import {types} from './actions'
 
 const todosData = (state = List(), {type, payload}) => {
     switch (type) {
@@ -10,38 +10,38 @@ const todosData = (state = List(), {type, payload}) => {
             return payload;
         case types.UPDATE_SUCCESS:
             return state.map(item => (
-                    item.get("id") === payload.id ?
-                        item.set("text", payload.inputValue) : item
+                    item.get('id') === payload.id ?
+                        item.set('text', payload.inputValue) : item
                 )
             );
         case types.TOGGLE_DONE_SUCCESS:
             return state.map(item => {
-                if (item.get("id") !== payload) {
+                if (item.get('id') !== payload) {
                     return item
                 }
-                return item.set("completed", !item.get("completed"))
+                return item.set('completed', !item.get('completed'))
             });
         case types.DELETE_SUCCESS:
-            return state.filter((item) => item.get("id") !== payload);
+            return state.filter((item) => item.get('id') !== payload);
         case types.FILTER_DONE:
-            return state.filter((item) => item.get("completed") === true);
+            return state.filter((item) => item.get('completed') === true);
         case types.FILTER_UNDONE:
-            return state.filter((item) => item.get("completed") === false);
+            return state.filter((item) => item.get('completed') === false);
         default:
             return state
     }
 };
 
 const isLoading = (state = false, {type}) => ( type === types.TOGGLE_LOADING ? !state : state);
-const editID = (state = "", {type, payload}) => {
+const editID = (state = '', {type, payload}) => {
     if (type === types.TOGGLE_EDITING) {
         return payload === state ? null : payload
     } else {
         return state
     }
 };
-const createInput = (state = "", {type, payload}) => (type === types.SET_CREATE_INPUT ? payload : state);
-const updateInput = (state = "", {type, payload}) => (type === types.SET_UPDATE_INPUT ? payload : state);
+const createInput = (state = '', {type, payload}) => (type === types.SET_CREATE_INPUT ? payload : state);
+const updateInput = (state = '', {type, payload}) => (type === types.SET_UPDATE_INPUT ? payload : state);
 
 export default combineReducers({
     todosData,

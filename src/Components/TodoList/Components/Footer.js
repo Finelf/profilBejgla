@@ -1,18 +1,18 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {getTodos} from "../selectors";
+import {getTodos} from '../selectors';
 import {
     toggleDone,
     deleteTodo,
     getAllBegin,
     filterUndone,
-} from "../actions";
+} from '../actions';
 
 const Footer = props => {
     const deleteComplete = () => {
         props.todos.forEach(item => {
-            if (item.get("completed") === true) {
-                props.deleteTodo(item.get("id"))
+            if (item.get('completed') === true) {
+                props.deleteTodo(item.get('id'))
             }
         })
     };

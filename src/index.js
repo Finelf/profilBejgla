@@ -4,7 +4,7 @@ import {Provider} from 'react-redux'
 import {ConnectedRouter} from 'connected-react-router/immutable'
 import configureStore, {history, sagaMiddleware} from './configureStore'
 import App from './Components/App/App';
-import {rootSaga} from "./Components/App/rootSagas";
+import {rootSaga} from './Components/App/rootSagas';
 
 const store = configureStore();
 

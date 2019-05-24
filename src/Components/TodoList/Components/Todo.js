@@ -1,12 +1,12 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux'
-import {getEditID, getUpdateInputValue} from "../selectors";
+import {getEditID, getUpdateInputValue} from '../selectors';
 import {
     setUpdateInput,
     update,
     toggleDone,
     deleteTodo,
-} from "../actions";
+} from '../actions';
 
 import Checkbox from '@material-ui/core/Checkbox/index'
 
@@ -27,27 +27,27 @@ class Todo extends Component {
             <tr>
                 <td>
                     <Checkbox
-                        checked={todo.get("completed")}
-                        onChange={() => this.handleCheckbox(todo.get("id"), todo.get("completed"))}
+                        checked={todo.get('completed')}
+                        onChange={() => this.handleCheckbox(todo.get('id'), todo.get('completed'))}
                         color='default'
-                        value="toggle done"/>
+                        value='toggle done'/>
                 </td>
                 <td className='text'>
-                    {(editID === todo.get("id")) ?
+                    {(editID === todo.get('id')) ?
                         <form onSubmit={(e) => {
                             e.preventDefault();
-                            this.handleSubmit(todo.get("id"), inputValue);
+                            this.handleSubmit(todo.get('id'), inputValue);
                         }}>
-                            <input type="text"
+                            <input type='text'
                                    onChange={this.handleChange}
                                    name='form'
                                    value={inputValue}
-                                   placeholder={todo.get("text")}
+                                   placeholder={todo.get('text')}
                                    required
                             />
                         </form> :
                         <span
-                            style={{textDecoration: todo.get("completed") ? 'line-through' : 'none'}}>{todo.get("text")}</span>
+                            style={{textDecoration: todo.get('completed') ? 'line-through' : 'none'}}>{todo.get('text')}</span>
                     }
                 </td>
             </tr>

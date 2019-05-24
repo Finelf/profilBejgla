@@ -1,9 +1,10 @@
 import React from 'react'
 import {Field, reduxForm, formValueSelector} from 'redux-form/immutable'
+import {pushRoute} from '../../../App/routesActions'
 import {connect} from 'react-redux'
-import {renderSwitch} from "./styledFormParts";
+import {renderSwitch} from './styledFormParts';
 import validate from './validate'
-import {create} from "../../actions";
+import {create} from '../../actions';
 
 
 let AddTodoForm = props => {
@@ -18,19 +19,19 @@ let AddTodoForm = props => {
         <form onSubmit={handleSubmit(myHandleSubmit)} className='todoForm'>
             <div>
                 <Field
-                    name="description"
+                    name='description'
                     component='input'
-                    label="Popis"
+                    label='Popis'
                 />
             </div>
             <div>
                 <Field
                     className='dropDown'
-                    name="taskType"
+                    name='taskType'
                     component='select'
-                    label="Druh úkolu"
+                    label='Druh úkolu'
                 >
-                    <option value=""/>
+                    <option value=''/>
                     <option value={'Kočičí záchod'}>Kočičí záchod</option>
                     <option value={'Úklid kuchyně'}>Úklid kuchyně</option>
                     <option value={'Úklid koupelny'}>Úklid koupelny</option>
@@ -44,22 +45,22 @@ let AddTodoForm = props => {
                     <option value={'Umytí kožky'}>Umytí kožky</option>
                     <option value={'Jiné'}>Jiné</option>
                 </Field>
-                {/*values.get("takType") &&
+                {/*values.get('takType') &&
                 <Field
-                    name="otherTask"
+                    name='otherTask'
                     component={renderTextField}
-                    label="Jiný úkol"
+                    label='Jiný úkol'
                 />
                 */}
             </div>
             <div>
                 <Field
                     className='dropDown'
-                    name="place"
+                    name='place'
                     component='select'
-                    label="Místo"
+                    label='Místo'
                 >
-                    <option value=""/>
+                    <option value=''/>
                     <option value={'Chodba'}>Chodba</option>
                     <option value={'Koupena'}>Koupena</option>
                     <option value={'Obyvák'}>Obyvák</option>
@@ -73,25 +74,25 @@ let AddTodoForm = props => {
             <div className='halfInForm'>
                 <Field
                     className='dropDown'
-                    name="bounty"
+                    name='bounty'
                     component='select'
-                    label="Bounty"
+                    label='Bounty'
                 >
-                    <option value=""/>
+                    <option value=''/>
                     <option value={'1'}>1</option>
                     <option value={'2'}>2</option>
                     <option value={'3'}>3</option>
                     <option value={'4'}>4</option>
                     <option value={'5'}>5</option>
                 </Field>
-                <Field name="isDone" component={renderSwitch} label="Je úkol hotový?"/>
+                <Field name='isDone' component={renderSwitch} label='Je úkol hotový?'/>
             </div>
             <div/>
             <div className='halfInForm'>
-                <button type="button" disabled={submitting}>
+                <button type='button' disabled={submitting} onClick={()=>{props.pushRoute('dashboard')}}>
                     Go back
                 </button>
-                <button type="submit" disabled={pristine || submitting}>
+                <button type='submit' disabled={pristine || submitting}>
                     Odeslat
                 </button>
             </div>
@@ -112,6 +113,7 @@ const mapStateToProps = state => {
 };
 const mapDispatchToProps = dispatch => ({
     create: inputValue => dispatch(create(inputValue)),
+    pushRoute: destination => dispatch(pushRoute(destination))
 });
 AddTodoForm = connect(
     mapStateToProps,

@@ -1,27 +1,31 @@
 import React from 'react'
-import {Route, Redirect} from 'react-router-dom'
-import {getUserLoginStatus} from "./App/generalSelector";
-import {connect} from "react-redux";
+import {Route} from 'react-router-dom'
+import {getUserLoginStatus} from './App/generalSelector';
+import {connect} from 'react-redux';
+import {pushRoute} from "./App/routesActions";
 
-const ProtectedRoute = ({component: Component, ...rest}) => {
+const ProtectedRoute = ({component: Component, pushRoute, ...rest}) => {
+    const permissionDecision = props => {
+        if(rest.isUserLoggedIn) {
+            return <Component {...props}/>
+        } else {
+            pushRoute('login');
+            return null
+        }
+    };
+
     return (
-        <Route {...rest} render={props => (
-            rest.isUserLoggedIn ?
-                <Component {...props}/> :
-                <Redirect to={{
-                    pathname: '/login',
-                    state: {from: props.location}
-                }}/>
-        )}
-        />
+        <Route {...rest} render={permissionDecision}/>
     )
 };
 
 const mapStateToProps = state => {
     return {
         isUserLoggedIn: getUserLoginStatus(state),
-
     }
 };
+const mapDispatchToProps = dispatch => ({
+    pushRoute: destination => dispatch(pushRoute(destination))
+});
 
-export default connect(mapStateToProps, null)(ProtectedRoute);
+export default connect(mapStateToProps, mapDispatchToProps)(ProtectedRoute);

@@ -1,10 +1,10 @@
 import {db} from '../App/firebaseConfig'
 
 export const fetchTodos = () => {
-    return db.collection("todos").get()
-        .then(querySnapshot => {
+    return db.collection('todos').get()
+        .then(snapshot => {
             const newArray = [];
-            querySnapshot.forEach(doc => {
+            snapshot.forEach(doc => {
                 newArray.push({
                     id: doc.id,
                     ...doc.data()
@@ -18,7 +18,7 @@ export const postTodoAsync = (payload) => {
     let todoObject = {
         payload
     };
-    return db.collection("todos").add({
+    return db.collection('todos').add({
         todoObject
     }).then(docRef => {
         todoObject.id = docRef.id;
