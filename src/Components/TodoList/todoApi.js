@@ -15,29 +15,38 @@ export const fetchTodos = () => {
 };
 
 export const postTodoAsync = (payload) => {
-    let todoObject = {
-        payload
-    };
     return db.collection('todos').add({
-        todoObject
+        ...payload
     }).then(docRef => {
-        todoObject.id = docRef.id;
-        return todoObject
+        payload.id = docRef.id;
+        return payload
     })
 };
 export const updateTodoAsync = (input, id) => {
-    // return axios.post(apiUrl + '/' + id, {
-    //     text:input,
-    //     id: id
-    // })
+    db.collection('todos').doc(id).update({
+        description: input
+    }).then(() => {
+        return console.log('Successfully updated')
+    }).catch( err => {
+        console.log(err)
+    })
 };
-export const completeTodoAsync = (id) => {
-    // return axios.post(apiUrl + '/' + id + '/complete', {id: id})
-};
-export const incompleteTodoAsync = (id) => {
-    // return axios.post(apiUrl + '/' + id + '/incomplete', {id: id})
+export const toggleTodoAsync = (props) => {
+    const {isDone, uid, id} = props;
+    db.collection('todos').doc(id).update({
+        isDone: !isDone,
+        doneBy: isDone ? null : uid,
+        doneDate: isDone ? null : Date.now()
+    }).then(() => {
+        return console.log('Success')
+    }).catch( err => {
+        console.log(err)
+    })
 };
 
 export const deleteTodoAsync = (id) => {
-    // return axios.delete(apiUrl + '/' + id)
+    db.collection('todos').doc(id).delete().then(() => {
+            return console.log('Successfully deleted')
+        }
+    )
 };

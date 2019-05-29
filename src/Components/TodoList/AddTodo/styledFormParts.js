@@ -1,7 +1,7 @@
 import React from 'react';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import FormGroup from '@material-ui/core/FormGroup';
-import Switch from '@material-ui/core/Switch';
+import FormControlLabel from '@material-ui/core/FormControlLabel/index';
+import FormGroup from '@material-ui/core/FormGroup/index';
+import Switch from '@material-ui/core/Switch/index';
 
 export const renderSwitch = ({label, input, ...custom}) => (
 <FormGroup>

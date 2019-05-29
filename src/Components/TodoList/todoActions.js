@@ -14,7 +14,8 @@ export const types = {
     UPDATE: 'UPDATE',
     UPDATE_SUCCESS: 'UPDATE_SUCCESS',
     TOGGLE_DONE: 'TOGGLE_DONE',
-    TOGGLE_DONE_SUCCESS: 'TOGGLE_DONE_SUCCESS',
+    COMPLETE_TODO: 'COMPLETE_TODO',
+    INCOMPLETE_TODO: 'INCOMPLETE_TODO',
 
     FILTER_UNDONE: 'FILTER_UNDONE',
 
@@ -45,10 +46,6 @@ export const toggleEditing = (id) => ({
     type: types.TOGGLE_EDITING,
     payload: id
 });
-export const setUpdateInput = (payload) => ({
-    type: types.SET_UPDATE_INPUT,
-    payload: payload
-});
 export const update = (payload) => ({
     type: types.UPDATE,
     payload: payload
@@ -61,11 +58,14 @@ export const toggleDone = (payload) => ({
     type: types.TOGGLE_DONE,
     payload: payload
 });
-export const toggleDoneSuccess = (id) => ({
-    type: types.TOGGLE_DONE_SUCCESS,
+export const completeTodo = (id) => ({
+    type: types.COMPLETE_TODO,
     payload: id
 });
-
+export const incompleteTodo = (id) => ({
+    type: types.INCOMPLETE_TODO,
+    payload: id
+});
 
 export const deleteTodo = (id) => ({
     type: types.DELETE,

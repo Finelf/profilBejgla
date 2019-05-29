@@ -11,15 +11,24 @@ const todosData = (state = List(), {type, payload}) => {
         case types.UPDATE_SUCCESS:
             return state.map(item => (
                     item.get('id') === payload.id ?
-                        item.set('text', payload.inputValue) : item
+                        item.set('description', payload.inputValue) : item
                 )
             );
-        case types.TOGGLE_DONE_SUCCESS:
+        case types.COMPLETE_TODO:
             return state.map(item => {
-                if (item.get('id') !== payload) {
+                if (item.get('id') !== payload.id) {
                     return item
+                } else {
+                    return item.set('isDone', true).set('doneBy', payload.uid).set('doneDate', Date.now())
                 }
-                return item.set('completed', !item.get('completed'))
+            });
+        case types.INCOMPLETE_TODO:
+            return state.map(item => {
+                if (item.get('id') !== payload.id) {
+                    return item
+                } else {
+                    return item.set('isDone', false).set('doneBy', null)
+                }
             });
         case types.DELETE_SUCCESS:
             return state.filter((item) => item.get('id') !== payload);
@@ -32,21 +41,12 @@ const todosData = (state = List(), {type, payload}) => {
     }
 };
 
-const isLoading = (state = false, {type}) => ( type === types.TOGGLE_LOADING ? !state : state);
-const editID = (state = '', {type, payload}) => {
-    if (type === types.TOGGLE_EDITING) {
-        return payload === state ? null : payload
-    } else {
-        return state
-    }
-};
-const createInput = (state = '', {type, payload}) => (type === types.SET_CREATE_INPUT ? payload : state);
-const updateInput = (state = '', {type, payload}) => (type === types.SET_UPDATE_INPUT ? payload : state);
+const isLoading = (state = false, {type}) => (type === types.TOGGLE_LOADING ? !state : state);
+const editMode = (state = false, {type}) => (type === types.TOGGLE_EDITING ? !state : state);
+
 
 export default combineReducers({
     todosData,
     isLoading,
-    editID,
-    createInput,
-    updateInput,
+    editMode,
 })

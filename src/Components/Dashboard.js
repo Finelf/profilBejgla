@@ -5,15 +5,19 @@ import TodoList from './TodoList/TodoList'
 import {signOutUser} from "./auth/authActions";
 import {connect} from "react-redux";
 
-const Dashboard = (props) => {
+const Dashboard = () => {
     let reactSwipeEl;
     return (
         <Fragment>
             <h1>Dashboard</h1>
-            <button onClick={() => props.signOut()}>Log me out!</button>
+            {/*<button onClick={() => props.signOut()}>Log me out!</button>*/}
             <ReactSwipe
                 className='carousel'
-                swipeOptions={{continuous: false}}
+                swipeOptions={{
+                    continuous: false,
+                    startSlide: 1,
+
+                }}
                 ref={el => (reactSwipeEl = el)}
             >
                 <div><Agreement/></div>
@@ -29,5 +33,4 @@ const Dashboard = (props) => {
 const mapDispatchToProps = dispatch => ({
     signOut: () => dispatch(signOutUser())
 });
-
 export default connect(null, mapDispatchToProps)(Dashboard);

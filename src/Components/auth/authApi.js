@@ -9,7 +9,10 @@ export const isUserAuthorizedAsync = () => {
                 if (user) {
                     user.getIdTokenResult()
                         .then(idTokenResult => {
-                            resolve(idTokenResult.claims.authorizedUser)
+                            resolve({
+                                token: idTokenResult.claims.authorizedUser,
+                                currentUid: user.uid
+                            })
                         })
                         .catch(reject)
                 } else {

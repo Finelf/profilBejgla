@@ -1,12 +1,12 @@
 import React from 'react';
 import {connect} from 'react-redux'
-import {getTodos} from '../../App/generalSelectors';
+import {getTodos} from '../App/generalSelectors';
 import {
     toggleDone,
     deleteTodo,
     getAllBegin,
     filterUndone,
-} from '../todoActions';
+} from './todoActions';
 
 const Footer = props => {
     return (

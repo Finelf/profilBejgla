@@ -1,26 +1,22 @@
 import React from 'react'
 import {connect} from 'react-redux'
-import {getIsLoading} from '../App/generalSelectors'
-import {pushRoute} from '../App/routes/routesActions';
+import {getIsLoading, getTodos} from '../App/generalSelectors'
 
-import Fab from '@material-ui/core/Fab';
-import AddIcon from '@material-ui/icons/Add';
-import TodoView from './Components/TodoView'
-import Footer from './Components/Footer'
 import IconLoop from '@material-ui/icons/Loop'
+import Todo from "./Todo";
+import AddButton from "./AddButton";
+//import Footer from './Components/Footer'
 import './App.css'
 
 const TodoList = (props) => {
     return (
         <div>
             {props.isLoading ? (<IconLoop className='animate'/>) : null}
-            <TodoView/>
-            <Footer/>
-            <Fab color='primary' aria-label='Add' className='fab'>
-                <AddIcon onClick={() => {
-                    props.pushRoute('addtodo')
-                }}/>
-            </Fab>
+            {props.todos.map(todo => (
+                <Todo key={todo.get('id')} todo={todo}/>
+            ))}
+            <AddButton/>
+            {/*<Footer/>*/}
         </div>
     );
 };
@@ -28,10 +24,8 @@ const TodoList = (props) => {
 const mapStateToProps = state => {
     return {
         isLoading: getIsLoading(state),
+        todos: getTodos(state),
     }
 };
-const mapDispatchToProps = dispatch => ({
-    pushRoute: destination => dispatch(pushRoute(destination))
-});
 
-export default connect(mapStateToProps, mapDispatchToProps)(TodoList);
+export default connect(mapStateToProps, null)(TodoList);

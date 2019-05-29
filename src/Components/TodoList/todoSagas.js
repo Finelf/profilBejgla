@@ -5,19 +5,18 @@ import {
     createSuccess,
     toggleLoading,
     toggleEditing,
-    setUpdateInput,
     updateSuccess,
+    incompleteTodo,
+    completeTodo,
     getAllSuccess,
-    toggleDoneSuccess,
     deleteSuccess,
-    types,
+    types
 } from './todoActions'
 import {
     fetchTodos,
     postTodoAsync,
     updateTodoAsync,
-    incompleteTodoAsync,
-    completeTodoAsync,
+    toggleTodoAsync,
     deleteTodoAsync
 } from './todoApi'
 
@@ -49,19 +48,19 @@ function* updateTodo({payload}) {
     yield call(updateTodoAsync, inputValue, id);
     yield put(updateSuccess({inputValue, id}));
     yield put(toggleEditing(''));
-    yield put(setUpdateInput(''));
 }
 
 function* toggleDoneTodo({payload}) {
-    if (payload.completed === true) {
-        yield call(incompleteTodoAsync, payload.id)
-    } else {
-        yield call(completeTodoAsync, payload.id)
+    yield call(toggleTodoAsync, payload);
+    if(payload.isDone){
+        yield put(incompleteTodo(payload))
+    }else {
+        yield put(completeTodo(payload))
     }
-    yield put(toggleDoneSuccess(payload.id));
 }
 
 function* deleteTodo({payload}) {
     yield call(deleteTodoAsync, payload);
     yield put(deleteSuccess(payload));
+    yield put(push('/dashboard'))
 }

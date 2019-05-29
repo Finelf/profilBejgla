@@ -27,9 +27,10 @@ export function* authSaga() {
 
 
 function* checkAuthStatus() {
-    const isUserAuthorized = yield call(isUserAuthorizedAsync);
-    if (isUserAuthorized) {
+    const userInfo = yield call(isUserAuthorizedAsync);
+    if (userInfo.token) {
         yield put(authorizeUserEnd());
+        yield put(authUserEnd(fromJS({uid: userInfo.currentUid})));
         yield put(push('/dashboard'))
     } else {
         yield put(push('/404'))
