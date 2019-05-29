@@ -8,7 +8,6 @@ import FourOFour from '../FourOFour';
 import Login from '../Login'
 import Landing from '../Landing'
 import ProtectedRoute from './routes/ProtectedRoute';
-import './App.css';
 
 const App = () => (
     <Fragment>

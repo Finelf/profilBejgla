@@ -5,8 +5,6 @@ import {getIsLoading, getTodos} from '../App/generalSelectors'
 import IconLoop from '@material-ui/icons/Loop'
 import Todo from "./Todo";
 import AddButton from "./AddButton";
-//import Footer from './Components/Footer'
-import './App.css'
 
 const TodoList = (props) => {
     return (
@@ -16,7 +14,6 @@ const TodoList = (props) => {
                 <Todo key={todo.get('id')} todo={todo}/>
             ))}
             <AddButton/>
-            {/*<Footer/>*/}
         </div>
     );
 };

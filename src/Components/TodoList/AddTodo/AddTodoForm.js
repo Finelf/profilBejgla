@@ -21,6 +21,7 @@ class AddTodoForm extends React.Component {
                 ...values.toJS()
             })
         }
+
         return (
             <form onSubmit={handleSubmit(myHandleSubmit)} className='todoForm'>
                 <div>
@@ -109,12 +110,10 @@ class AddTodoForm extends React.Component {
     }
 }
 
-
 AddTodoForm = reduxForm({
     form: 'addTodo',
     validate,
 })(AddTodoForm);
-
 const mapStateToProps = state => {
     return {
         values: formValueSelector('addTodo')(state, 'addTodo')

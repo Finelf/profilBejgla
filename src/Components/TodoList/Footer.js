@@ -1,3 +1,4 @@
+/* SOON TO BE DELETED */
 import React from 'react';
 import {connect} from 'react-redux'
 import {getTodos} from '../App/generalSelectors';
