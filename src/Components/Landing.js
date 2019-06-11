@@ -1,12 +1,9 @@
 import React from 'react'
 
-const Landing = () => {
-
-    return (
-        <div>
-            Vítej :)
-        </div>
-    );
-};
+const Landing = () => (
+    <div>
+        Vítej :)
+    </div>
+);
 
 export default Landing

@@ -9,7 +9,7 @@ let UpdateTodoForm = (props) => {
 
     function myHandleSubmit(values) {
         update({
-            id:props.id,
+            id: props.id,
             inputValue: values.get('description')
         })
     }

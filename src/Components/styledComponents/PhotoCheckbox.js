@@ -28,13 +28,11 @@ const StyledCheckbox = styled.div`
   transition: all 150ms;
 `;
 
-const PhotoCheckbox = ({className, checked, photoSelector, ...props}) => {
-    return (
-        <CheckboxContainer className={className}>
-            <HiddenCheckbox checked={checked} {...props}/>
-            <StyledCheckbox checked={checked} photoSelector={photoSelector}/>
-        </CheckboxContainer>
-    );
-};
+const PhotoCheckbox = ({className, checked, photoSelector, ...props}) => (
+    <CheckboxContainer className={className}>
+        <HiddenCheckbox checked={checked} {...props}/>
+        <StyledCheckbox checked={checked} photoSelector={photoSelector}/>
+    </CheckboxContainer>
+);
 
 export default PhotoCheckbox

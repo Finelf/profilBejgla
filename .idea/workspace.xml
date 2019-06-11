@@ -3,14 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="b711996b-6c49-4108-a9e3-c5c0c9980610" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/App/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/App/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/App/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Landing.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/Landing.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Components/TodoList/AddButton.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList/AddButton.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList/AddTodo/AddTodoForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList/AddTodo/AddTodoForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList/Footer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList/Footer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList/Todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Components/TodoList/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/styledComponents/PhotoCheckbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Components/styledComponents/PhotoCheckbox.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -40,13 +37,71 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Components/TodoList/Todo.js">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/App/generalSelectors.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="589">
-              <caret line="37" selection-start-line="37" selection-end-line="37" />
+            <state relative-caret-position="209">
+              <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="703">
+              <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
+                <element signature="e#0#25#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/TodoList/todoReducer.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="931">
+              <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+              <folding>
+                <element signature="e#0#30#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/TodoList/todoSagas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
+              <folding>
+                <element signature="e#0#55#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Components/App/rootSagas.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+              <folding>
+                <element signature="e#0#40#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="380">
+              <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <folding>
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#iframe#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -82,6 +137,8 @@
       <find>created</find>
       <find>AddTodoForm</find>
       <find>Component</find>
+      <find>return</find>
+      <find>return</find>
     </findStrings>
     <replaceStrings>
       <replace>AUTH_USER</replace>
@@ -90,6 +147,7 @@
     </replaceStrings>
     <dirStrings>
       <dir>C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\TodoList\Components\AddTodo</dir>
+      <dir>C:\Users\moro\WebstormProjects\profil_bejgla</dir>
       <dir>C:\Users\moro\WebstormProjects\profil_bejgla\src</dir>
     </dirStrings>
   </component>
@@ -99,7 +157,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Components/TodoList/selectors.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/actions.js" />
         <option value="$PROJECT_DIR$/src/Components/Admin/Admin.js" />
         <option value="$PROJECT_DIR$/src/Components/App/firebaseConfig.js" />
@@ -119,7 +176,6 @@
         <option value="$PROJECT_DIR$/src/Components/App/redux/rootReducer.js" />
         <option value="$PROJECT_DIR$/src/Components/auth/authActions.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/Components/Footer.js" />
-        <option value="$PROJECT_DIR$/src/Components/Landing.js" />
         <option value="$PROJECT_DIR$/src/Components/App/routes/routesSagas.js" />
         <option value="$PROJECT_DIR$/src/Components/App/redux/configureStore.js" />
         <option value="$PROJECT_DIR$/src/Components/Admin.js" />
@@ -137,8 +193,6 @@
         <option value="$PROJECT_DIR$/src/Components/TodoList/todoSagas.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/todoApi.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/todoReducer.js" />
-        <option value="$PROJECT_DIR$/src/Components/styledComponents/PhotoCheckbox.js" />
-        <option value="$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js" />
         <option value="$PROJECT_DIR$/src/Components/auth/authSagas.js" />
         <option value="$PROJECT_DIR$/src/Components/App/generalSelectors.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/TodoDetail.js" />
@@ -148,8 +202,12 @@
         <option value="$PROJECT_DIR$/src/Components/TodoList/AddTodo/AddTodoForm.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/TodoList.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/Footer.js" />
-        <option value="$PROJECT_DIR$/src/Components/TodoList/AddButton.js" />
         <option value="$PROJECT_DIR$/src/Components/TodoList/Todo.js" />
+        <option value="$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js" />
+        <option value="$PROJECT_DIR$/src/Components/Landing.js" />
+        <option value="$PROJECT_DIR$/src/Components/TodoList/AddButton.js" />
+        <option value="$PROJECT_DIR$/src/Components/styledComponents/PhotoCheckbox.js" />
+        <option value="$PROJECT_DIR$/public/index.html" />
       </list>
     </option>
   </component>
@@ -159,11 +217,11 @@
     <other-services-enabled>true</other-services-enabled>
     <auto-save>true</auto-save>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-1088" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="486" />
+    <option name="y" value="8" />
+    <option name="width" value="1382" />
+    <option name="height" value="965" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -172,12 +230,18 @@
     </navigator>
     <panes>
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="profilBejgla" type="b2602c69:ProjectViewProjectNode" />
               <item name="profil_bejgla" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="profilBejgla" type="b2602c69:ProjectViewProjectNode" />
+              <item name="profil_bejgla" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="profilBejgla" type="b2602c69:ProjectViewProjectNode" />
@@ -202,35 +266,12 @@
               <item name="profil_bejgla" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="profilBejgla" type="b2602c69:ProjectViewProjectNode" />
-              <item name="profil_bejgla" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="styledComponents" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="profilBejgla" type="b2602c69:ProjectViewProjectNode" />
-              <item name="profil_bejgla" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
               <item name="TodoList" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="profilBejgla" type="b2602c69:ProjectViewProjectNode" />
-              <item name="profil_bejgla" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Components" type="462c0819:PsiDirectoryNode" />
-              <item name="TodoList" type="462c0819:PsiDirectoryNode" />
-              <item name="AddTodo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -252,15 +293,15 @@
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2019.1.2\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\TodoList" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\TodoList" />
       <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\App\redux" />
       <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\App\routes" />
       <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\App" />
       <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\moro\WebstormProjects\profil_bejgla\src\Components\TodoList" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -316,7 +357,13 @@
       <workItem from="1557989693887" duration="82573000" />
       <workItem from="1558505921681" duration="73221000" />
       <workItem from="1558943257432" duration="21509000" />
-      <workItem from="1559023653787" duration="37544000" />
+      <workItem from="1559023653787" duration="38203000" />
+      <workItem from="1559213652124" duration="220000" />
+      <workItem from="1559635235732" duration="1336000" />
+      <workItem from="1559649280008" duration="138000" />
+      <workItem from="1559649747911" duration="141000" />
+      <workItem from="1559719628257" duration="9176000" />
+      <workItem from="1560258409644" duration="787000" />
     </task>
     <task id="LOCAL-00001" summary="Initial commit">
       <created>1556460362794</created>
@@ -388,11 +435,18 @@
       <option name="project" value="LOCAL" />
       <updated>1559113974584</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Minor refactor">
+      <created>1559114723366</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1559114723366</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="326571000" />
+    <option name="totallyTimeSpent" value="339028000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,10 +458,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
+    <frame x="486" y="8" width="1382" height="965" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.10642782" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17336309" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -422,8 +476,8 @@
       <window_info anchor="bottom" id="TODO" order="7" weight="0.32998884" />
       <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32998884" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" weight="0.20178372" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.49947312" weight="0.16499442" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50052685" side_tool="true" weight="0.20157658" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" sideWeight="0.49947312" visible="true" weight="0.382134" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Messages" order="13" weight="0.32887402" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -446,7 +500,8 @@
     <MESSAGE value="Refactor of application" />
     <MESSAGE value="Todo create, update, delete&#10;User connected to todos" />
     <MESSAGE value="Todo create, update, delete&#10;User connected to functionality&#10;Styled components introduced" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todo create, update, delete&#10;User connected to functionality&#10;Styled components introduced" />
+    <MESSAGE value="Minor refactor" />
+    <option name="LAST_COMMIT_MESSAGE" value="Minor refactor" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
@@ -461,13 +516,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/TodoList/Components/AddTodo/addTodo.js" />
-    <entry file="file://$PROJECT_DIR$/public/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/connected-react-router/immutable.d.ts">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -567,9 +615,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/App/App.css">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/App/App.css" />
     <entry file="file://$PROJECT_DIR$/src/Components/App/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -584,23 +630,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/App/generalSelectors.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="2" lean-forward="true" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/App/rootSagas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="1" lean-forward="true" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -668,13 +697,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/App.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="26" column="22" selection-start-line="26" selection-start-column="22" selection-end-line="26" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/App.css" />
     <entry file="file://$PROJECT_DIR$/src/Components/TodoList/Footer.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -765,39 +788,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/todoSagas.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="72" selection-start-line="1" selection-start-column="72" selection-end-line="1" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/Admin.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
           <folding>
             <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/todoReducer.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="51" column="2" lean-forward="true" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
-          <folding>
-            <element signature="e#0#30#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -814,10 +810,68 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Components/TodoList/Todo.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="589">
-          <caret line="37" selection-start-line="37" selection-end-line="37" />
+        <state relative-caret-position="29">
+          <caret line="11" column="25" lean-forward="true" selection-start-line="11" selection-start-column="25" selection-end-line="11" selection-end-column="25" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/App/generalSelectors.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="2" selection-start-line="11" selection-start-column="2" selection-end-line="11" selection-end-column="2" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/UpdateTodo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="703">
+          <caret line="40" column="4" selection-start-line="40" selection-start-column="4" selection-end-line="40" selection-end-column="4" />
+          <folding>
+            <element signature="e#0#25#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/todoReducer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="931">
+          <caret line="51" column="2" selection-start-line="51" selection-start-column="2" selection-end-line="51" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/TodoList/todoSagas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+          <folding>
+            <element signature="e#0#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Components/App/rootSagas.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="1" selection-start-line="9" selection-start-column="1" selection-end-line="9" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#iframe#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>
